@@ -1,0 +1,15 @@
+{
+  "name": "mini_js",
+  "homepage": "https://karthicksivakumar191194.github.io/mini-js-demo",
+  "version": "1.0.0",
+  "description": "Javascript custom library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karthick Sivakumar",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
