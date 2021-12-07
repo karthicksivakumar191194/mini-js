@@ -12,7 +12,7 @@ import Example4Page from "./src/pages/Example4Page.js";
 import * as mainJs from "./scripts/main.js";
 
 const app = new Mini("#app");
-const router = new Router({ basename: "" });
+const router = new Router({ basename: "/mini-js" });
 
 // Register App Routes Start
 router.get("/", function (req) {
@@ -49,9 +49,17 @@ const redirectTo = (pageSlug) => {
 };
 
 document.addEventListener("click", function (e) {
+  const dataBasename = document
+    .querySelector("body")
+    .getAttribute("data-basename");
+  let basename = "";
+  if (dataBasename) {
+    basename = dataBasename;
+  }
+
   //Handle "linkto" click event
   if (e?.target?.dataset?.linkto) {
     e.preventDefault();
-    redirectTo(e.target.dataset.linkto);
+    redirectTo(basename + e.target.dataset.linkto);
   }
 });
